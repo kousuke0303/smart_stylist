@@ -1,1 +1,1 @@
-* Git(HTTPSからSSH通信へ変更)
+# smart_stylist
