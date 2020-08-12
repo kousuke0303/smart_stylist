@@ -1,0 +1,15 @@
+FROM ruby:2.6.3
+
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+
+RUN mkdir /smart_stylist
+WORKDIR /smart_stylist
+
+ADD Gemfile /smart_stylist/Gemfile
+ADD Gemfile.lock /smart_stylist/Gemfile.lock
+
+ENV BUNDLER_VERSION 2.0.2
+RUN gem install bundler
+RUN bundle install
+
+ADD . /smart_stylist

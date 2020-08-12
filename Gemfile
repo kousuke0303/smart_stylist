@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '~> 5.2.3'
+gem 'mysql2',       '~>0.5.3'
 gem 'rails-i18n'
 gem 'bcrypt'
 gem 'faker'
@@ -22,7 +23,6 @@ gem 'activestorage', '~> 5.2.0'
 gem 'dotenv-rails'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails"
   gem "factory_bot_rails"
@@ -42,10 +42,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.20.0'
   gem 'rails_12factor'
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
-# Mac環境でもこのままでOKです
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Windows環境でtzinfo-dataを含める必要あり
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
