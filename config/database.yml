@@ -13,7 +13,6 @@ development:
   username: root
   host: db
 
-
 test:
   <<: *default
   database: smart_stylist_test_mysql2
@@ -25,4 +24,3 @@ production:
   database: <%= ENV['RDS_DB_NAME'] %>
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>
-
