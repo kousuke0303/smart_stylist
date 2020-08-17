@@ -152,7 +152,7 @@ GEM
     payjp (0.0.7)
       rest-client (~> 2.0)
     public_suffix (4.0.5)
-    puma (3.12.2)
+    puma (3.12.6)
     rack (2.0.8)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -299,7 +299,7 @@ DEPENDENCIES
   mini_magick (~> 4.8)
   mysql2 (~> 0.5.3)
   payjp
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.2.3)
   rails-controller-testing
   rails-i18n
