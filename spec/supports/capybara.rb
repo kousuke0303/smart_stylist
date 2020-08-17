@@ -10,12 +10,12 @@ Capybara.register_driver :selenium_remote do |app|
 end
 
 RSpec.configure do |config|
-  # config.before(:each, type: :system) do
-  #   driven_by :rack_test
-  # end
-  
-  config.before(:each, type: :system, js: true) do
-    driven_by :selenium_remote
+  config.before(:each, type: :system) do
+    driven_by :selenium, using: :chrome, options: {
+        browser: :remote,
+        url: "http://selenium_chrome:4444/wd/hub",
+        desired_capabilities: :chrome
+      }
     host! "http://#{Capybara.server_host}:#{Capybara.server_port}"
   end
 end

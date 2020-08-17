@@ -35,5 +35,7 @@ services:
       - .:/smart_stylist
   selenium_chrome:
     image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
     ports:
       - 4444:4444
