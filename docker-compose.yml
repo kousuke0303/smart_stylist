@@ -28,7 +28,12 @@ services:
     depends_on:
       - db
       - test-db
+      - selenium_chrome
     ports:
       - "3000:3000"
     volumes:
       - .:/smart_stylist
+  selenium_chrome:
+    image: selenium/standalone-chrome-debug
+    ports:
+      - 4444:4444
