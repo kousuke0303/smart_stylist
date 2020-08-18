@@ -42,7 +42,6 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
 end
 
 # Windows環境でtzinfo-dataを含める必要あり
