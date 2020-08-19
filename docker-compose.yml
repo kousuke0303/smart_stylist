@@ -4,10 +4,10 @@ services:
     build:
       context: .
       dockerfile: ./Docker_mysql.file
-    environment:
-      MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./mysql/mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
     ports:
       - "3306:3306"
   test-db:
