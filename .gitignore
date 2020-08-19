@@ -26,6 +26,6 @@
 /config/master.key
 
 /.env
-# /.env.development
-# /.env.production
-# /.env.test
+/.env.development
+/.env.production
+/.env.test
